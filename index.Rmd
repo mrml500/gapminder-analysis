@@ -1,0 +1,100 @@
+---
+title: "GAP MINDER ANALYSIS"
+author: "Mike Lawson"
+date: "10 April 2019"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+    
+    
+
+---
+
+```{r}
+library(gapminder)
+```
+
+
+#Background
+
+Gapminder is an independent Swedish foundation with no political, religious or economic affiliations. Gapminder is a fact tank, not a think tank. Gapminder fights devastating misconceptions about global development. Gapminder produces free teaching resources making the world understandable based on reliable statistics. Gapminder promotes a fact-based worldview everyone can understand.  Gapminder collaborates with universities, UN, public agencies and non-governmental organizations. All Gapminder activities are governed by the board. We do not award grants. Gapminder Foundation is registered at Stockholm County Administration Board. Our constitution can be found here.
+
+##WHAT GAPMINDER DOES
+Instead of wasting our time blaming the media or condemning the human brain, we develop free teaching material to dismantle misconceptions and promote a fact-based worldview.
+
+***Gapminder measures ignorance about the world***
+
+We identify the most ignored global facts by comparing what people think against the official statistics. We run public polls and we ask knowledge questions to live audiences from stage.
+
+***Gapminder makes global data easy to use and understand***
+
+We develop data visualization tools to let people explore the vast treasure of global statistics. Since many people hate statistics, we use photos as data to give the numbers meaning. We have sent photographers to 240 homes across the world to show how people really live. That’s what we call a fact-based worldview.
+
+***Gapminder provides courses and certificates***
+
+We also develop teaching materials and knowledge certificates. With our teacher certificate we want to create a global network of trusted Gapminder teachers who can represent us locally.
+
+***Gapminder promotes Factfulness, a new way of thinking***
+
+We promote a new way of thinking about the world and the society which we call Factfulness. It is the relaxing habit of carrying opinions that are based on solid facts.
+
+***Gapminder collaborates with educators across the world***
+
+Subscribe to our Newsletter and we’ll let you know how you can participate.
+
+<img src="data:image/png;base64,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" width="400px" />
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Installation
+
+To install gapminder, first you need to install these packages:
+
+```{r, eval = FALSE}
+install.packages(c("ggplot2", "dplyr"))
+```
+
+Next, you need to install gapminder:
+
+```{r, eval = FALSE}
+install.packages("gapminder")
+```
+
+Alternatively, if you use GitHub you can use this:
+
+```{r, eval = FALSE}
+devtools::install_github("jennybc/gapminder")
+
+```
+
+
+
+Then, load using the library function:
+
+```{r, message= FALSE, eval = FALSE}
+library("gapminder")
+library("ggplot2")
+library("dplyr")
+```
+
+***You are ready to use gapminder!***
+
+
+#***Life Expectancy vs. GDP per capita***
+
+```{r, hide-code, echo=FALSE, message=FALSE, warning = FALSE, fig.width= 6}
+library(ggplot2)
+library(gapminder)
+library(plotly)
+p <- ggplot(gapminder, aes(x = log10(gdpPercap), y = lifeExp, color = continent,)) + 
+    geom_point()
+ggplotly(p)
+```
+
+
