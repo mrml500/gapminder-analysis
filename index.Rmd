@@ -97,4 +97,7 @@ p <- ggplot(gapminder, aes(x = log10(gdpPercap), y = lifeExp, color = continent,
 ggplotly(p)
 ```
 
+```{r}
+print("hello")
+```
 
