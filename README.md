@@ -3,5 +3,5 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of gapminder-analysis is to ...
+The goal of gapminder-analysis is to explore the universe.
 
